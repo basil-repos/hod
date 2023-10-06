@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    padding: 0;
     background: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
 }
@@ -507,7 +508,7 @@ input[type="number"]::-webkit-outer-spin-button {
         line-height: 25px;
     }
     .form-wrapper{
-        width: 320px;
+        width: 100%;
     }
     .form{
         padding: 15px;
@@ -566,7 +567,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     
     .card{
-        width: 380px;
+        width: 100%;
         height: 250px;
     }
     
@@ -600,7 +601,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
     .expert-content-wrapper{
         flex-direction: column;
-        margin: 0px 70px;
+        margin: 0px 50px;
         gap: 10px;
     }
     
@@ -675,14 +676,14 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     .form-container{
         gap: 20px;
-        padding: 20px;
+        padding: 25px;
     }
     .form-title{
         font-size: 22px;
         line-height: 30px;
     }
     .form-wrapper{
-        width: 334px;
+        width: 80%;
     }
     .form{
         padding: 20px;
@@ -718,7 +719,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     
     .card-list-container{
-        padding: 10px 15px;
+        padding: 20px 40px;
         gap: 15px;
     }
     .card-list-header{
@@ -741,7 +742,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     
     .card{
-        width: 400px;
+        width: 100%;
         height: 255px;
     }
     
@@ -776,11 +777,11 @@ input[type="number"]::-webkit-outer-spin-button {
     .expert-content-wrapper{
         flex-direction: column;
         margin: 0px 60px;
-        gap: 10px;
+        gap: 15px;
     }
     
     .expert-content{
-        gap: 10px;
+        gap: 15px;
     }
 
     .expert-btn{
@@ -844,7 +845,7 @@ input[type="number"]::-webkit-outer-spin-button {
         font-size: 30px;
     }
     .form-wrapper{
-        width: 600px;
+        width: 85%;
     }
     .form{
         padding: 25px;
@@ -897,7 +898,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     
     .card{
-        width: 500px;
+        width: 100%;
         height: 240px;
     }
     
