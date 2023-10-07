@@ -377,6 +377,7 @@ body{
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    gap: 20px;
 }
 
 .testimonials-content-slider{
@@ -386,22 +387,41 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 .slider-arrow{
-    padding: 8px 9px;
     border-radius: 50%;
-    font-size: 13px;
+    cursor: pointer;
+}
+.slider-arrow i{
+    height: 50px;
+    width: 50px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 50px;
 }
 
 .testimonials-content-list{
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+    align-items: center; */
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    place-items: center;
+    gap: 16px;
+    margin: 0 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.testimonials-content-list::-webkit-scrollbar{
+    display: none;
 }
 
 .testimonial-card{
-    width: 360px;
+    /* width: 380px; */
+    scroll-snap-align: start;
     height: 300px;
     border-radius: 20px;
     border: 2px solid #005FB4;
@@ -632,6 +652,52 @@ input[type="number"]::-webkit-outer-spin-button {
     .footer-link{
         font-size: 10px;
     }
+    
+    .testimonials{
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .testimonials-title{
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .testimonials-content{
+        margin-bottom: 10px;
+    }
+
+    .testimonials-content-slider{
+        width: 15px;
+        padding: 5px;
+    }
+
+    .slider-arrow i{
+        height: 25px;
+        width: 25px;
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .testimonials-content-list{
+        grid-auto-columns: calc(100% - 12px);
+        /* margin: 0 12px 0 12px; */
+        gap: 14px;
+    }
+    
+    .testimonial-card{
+        padding: 14px 14px;
+    }
+    
+    .testimonial-card-content-title{
+        font-size: 16px;
+        line-height: 18px;
+    }
+    
+    .testimonial-card-footer-text{
+        font-size: 20px;
+        line-height: 26px;
+    }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px){
@@ -807,6 +873,42 @@ input[type="number"]::-webkit-outer-spin-button {
     .footer-link{
         font-size: 12px;
     }
+    
+    .testimonials{
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .testimonials-title{
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .testimonials-content{
+        margin-bottom: 10px;
+    }
+
+    .testimonials-content-slider{
+        width: 20px;
+        padding: 3px;
+    }
+
+    .slider-arrow i{
+        height: 35px;
+        width: 35px;
+        font-size: 16px;
+        line-height: 35px;
+    }
+
+    .testimonials-content-list{
+        grid-auto-columns: calc(100% - 14px);
+        /* margin: 0 16px 0 16px; */
+        gap: 16px;
+    }
+    
+    .testimonial-card{
+        padding: 20px;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 960px){
@@ -954,6 +1056,52 @@ input[type="number"]::-webkit-outer-spin-button {
         font-size: 26px;
         line-height: 32px;
     }    
+    
+    .testimonials{
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .testimonials-title{
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .testimonials-content{
+        margin-bottom: 10px;
+    }
+
+    .testimonials-content-slider{
+        width: 15px;
+        padding: 5px;
+    }
+
+    .slider-arrow i{
+        height: 40px;
+        width: 40px;
+        font-size: 16px;
+        line-height: 40px;
+    }
+
+    .testimonials-content-list{
+        grid-auto-columns: calc((100% / 2) - 12px);
+        /* margin: 0 0 0 12px; */
+        gap: 14px;
+    }
+
+    .testimonial-card{
+        padding: 20px 20px;
+    }
+    
+    .testimonial-card-content-title{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    
+    .testimonial-card-footer-text{
+        font-size: 24px;
+        line-height: 28px;
+    }
 }
 
 @media screen and (min-width: 961px) and (max-width: 1021px){
@@ -1008,5 +1156,11 @@ input[type="number"]::-webkit-outer-spin-button {
     .footer-alert-text{
         font-size: 28px;
         line-height: 35px;
+    }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1140px){
+    .testimonials-content-list{
+        grid-auto-columns: calc((100% / 2) - 12px);
     }
 }
