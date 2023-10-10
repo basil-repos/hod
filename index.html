@@ -15,7 +15,7 @@
         <img src="./assets/logo.svg" class="logo" alt="logo" />
         <div class="h-right">
             <img src="./assets/phone-icon.svg" class="p-icon" alt="logo" />
-            <span class="mobile">080 3559 2410</span>
+            <span class="mobile" id="phoneNumber">080 3559 2410</span>
         </div>
     </div>
     <div class="header-alert bg-light">
@@ -47,21 +47,26 @@
     </div>
     <div class="bg-primary form-container">
         <span class="form-title text-white fw-700">Submit your details for a Free callback</span>
+        <span class="form-title text-white fw-700"></span>
         <div class="form-wrapper">
-            <form class="form">
+            <form class="form" id="callback_form">
+                <div class="form-group form-success-wrapper" id="success-message">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Callback data saved successfully</span>
+                </div>
                 <div class="form-group">
                     <span class="fw-600 text-white form-label">Name</span>
-                    <input type="text" placeholder="Enter Name" class="input" />
+                    <input type="text" placeholder="Enter Name" class="input" name="name" id="name" autocomplete="off" required />
                 </div>
                 <div class="form-group">
                     <span class="fw-600 text-white form-label">Contact Number</span>
                     <div class="contact-wrapper">
                         <span class="contact-text text-white">+91</span>
-                        <input type="number" placeholder="Enter Contact Number" class="input contact-input" onkeydown="if (event.key === 'e') event.preventDefault();" />
+                        <input type="number" placeholder="Enter Contact Number" class="input contact-input" id="contact_number" name="contact_number" onkeydown="if (event.key === 'e') event.preventDefault();" autocomplete="off" required />
                     </div>
                 </div>
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" />
+                    <input type="checkbox" class="form-check-input" checked required />
                     <span class="form-check-label text-white fw-600">I hereby consent to receive calls/messages from House Of Dentistry 
                         and its partners and override DND settings.
                     </span>
@@ -342,7 +347,7 @@
         </div> -->
     </div>
     <div class="footer-alert bg-primary">
-        <span class="footer-alert-text text-white fw-600">Need Help? Talk to our experts @080 3559 2410</span>
+        <span class="footer-alert-text text-white fw-600">Need Help? Talk to our experts <span id="phoneNumber_bm">@080 3559 2410</span></span>
     </div>
     <div class="footer">
         <span class="footer-text fw-600 text-primary">All Rights Reserved, House of Dentistry 2023</span>
