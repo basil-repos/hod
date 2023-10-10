@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="./index.css" />
 </head>
-<body>
+<body class="body-content">
     <div class="header">
         <img src="./assets/logo.svg" class="logo" alt="logo" />
         <div class="h-right">
@@ -20,7 +20,7 @@
     </div>
     <div class="header-alert bg-light">
         <span class="fw-600 text-white lh-24 header-alert-text">Treatments starting from Rs.300</span>
-        <button class="button button-text lh-24 text-primary">Get a Callback <span class="fw-900">For FREE</span></button>
+        <button class="button button-text lh-24 text-primary" id="callback_btn">Get a Callback <span class="fw-900">For FREE</span></button>
     </div>
     <div class="info-container">
         <div class="info-text-wrapper">
@@ -45,7 +45,7 @@
         We are a <span class="fw-700">cutting-edge digital dentistry</span>, led by renowned <span class="fw-700">experts</span>, dedicated to delivering <span class="fw-700">top-tier precision</span> and <span class="fw-700">quality</span>. Unlike traditional general dentists, we offer the highest-quality care, leveraging <span class="fw-700">advanced digital technology</span> and <span class="fw-700">premium products</span>, all at the most <span class="fw-700">competitive prices</span>.<br />
         Our expert dentists guarantee <span class="fw-700">superior treatments, minimizing clinic visits</span> and delivering <span class="fw-700">rapid results you can trust</span>.
     </div>
-    <div class="bg-primary form-container">
+    <div class="bg-primary form-container" id="formContainer">
         <span class="form-title text-white fw-700">Submit your details for a Free callback</span>
         <span class="form-title text-white fw-700"></span>
         <div class="form-wrapper">
@@ -211,76 +211,121 @@
                 </span>
             </div>
             <div class="testimonials-content-list">
-                <div class="testimonial-card">
-                    <div class="testimonial-card-content">
-                        <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                <div class="testimonial-card-wrapper">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-content">
+                            <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                        </div>
+                        <div class="testimonial-card-footer">
+                            <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                        </div>
                     </div>
-                    <div class="testimonial-card-footer">
-                        <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card-content fw-500">
-                        <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
-                    </div>
-                    <div class="testimonial-card-footer">
-                        <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                    <div class="card-ratings">
+                        <img src="./assets/rating.svg" class="rating-img" alt="rating-img" />
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card-content fw-500">
-                        <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                <div class="testimonial-card-wrapper">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-content fw-500">
+                            <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                        </div>
+                        <div class="testimonial-card-footer">
+                            <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                        </div>
                     </div>
-                    <div class="testimonial-card-footer">
-                        <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card-content">
-                        <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
-                    </div>
-                    <div class="testimonial-card-footer">
-                        <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                    <div class="card-ratings">
+                        <img src="./assets/rating.svg" class="rating-img" alt="rating-img" />
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card-content fw-500">
-                        <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                <div class="testimonial-card-wrapper">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-content fw-500">
+                            <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                        </div>
+                        <div class="testimonial-card-footer">
+                            <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                        </div>
                     </div>
-                    <div class="testimonial-card-footer">
-                        <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card-content fw-500">
-                        <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
-                    </div>
-                    <div class="testimonial-card-footer">
-                        <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                    <div class="card-ratings">
+                        <img src="./assets/rating.svg" class="rating-img" alt="rating-img" />
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card-content">
-                        <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                <div class="testimonial-card-wrapper">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-content">
+                            <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                        </div>
+                        <div class="testimonial-card-footer">
+                            <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                        </div>
                     </div>
-                    <div class="testimonial-card-footer">
-                        <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card-content fw-500">
-                        <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
-                    </div>
-                    <div class="testimonial-card-footer">
-                        <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                    <div class="card-ratings">
+                        <img src="./assets/rating.svg" class="rating-img" alt="rating-img" />
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card-content fw-500">
-                        <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                <div class="testimonial-card-wrapper">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-content fw-500">
+                            <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                        </div>
+                        <div class="testimonial-card-footer">
+                            <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                        </div>
                     </div>
-                    <div class="testimonial-card-footer">
-                        <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                    <div class="card-ratings">
+                        <img src="./assets/rating.svg" class="rating-img" alt="rating-img" />
+                    </div>
+                </div>
+                <div class="testimonial-card-wrapper">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-content fw-500">
+                            <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                        </div>
+                        <div class="testimonial-card-footer">
+                            <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                        </div>
+                    </div>
+                    <div class="card-ratings">
+                        <img src="./assets/rating.svg" class="rating-img" alt="rating-img" />
+                    </div>
+                </div>
+                <div class="testimonial-card-wrapper">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-content">
+                            <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                        </div>
+                        <div class="testimonial-card-footer">
+                            <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                        </div>
+                    </div>
+                    <div class="card-ratings">
+                        <img src="./assets/rating.svg" class="rating-img" alt="rating-img" />
+                    </div>
+                </div>
+                <div class="testimonial-card-wrapper">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-content fw-500">
+                            <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                        </div>
+                        <div class="testimonial-card-footer">
+                            <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                        </div>
+                    </div>
+                    <div class="card-ratings">
+                        <img src="./assets/rating.svg" class="rating-img" alt="rating-img" />
+                    </div>
+                </div>
+                <div class="testimonial-card-wrapper">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-content fw-500">
+                            <span class="testimonial-card-content-title text-primary fw-500">Extremely satisfied with my experience at house of dentistry , Dr. Sushritha Sricharan was exceptionally skilled & was very patient . Would recommend everyone to visit their clinic for their dental needs.</span>
+                        </div>
+                        <div class="testimonial-card-footer">
+                            <span class="testimonial-card-footer-text text-primary fw-700">Yukti Garg</span>
+                        </div>
+                    </div>
+                    <div class="card-ratings">
+                        <img src="./assets/rating.svg" class="rating-img" alt="rating-img" />
                     </div>
                 </div>
             </div>

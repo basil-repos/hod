@@ -485,6 +485,23 @@ body{
     display: none;
 }
 
+.testimonial-card-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-ratings{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.rating-img{
+    width: 150px;
+    height: 70px;
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -597,7 +614,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     
     .card-list{
-        gap: 20px;
+        gap: 40px;
         flex-direction: column;
         align-items: center;
     }
@@ -719,6 +736,15 @@ input[type="number"]::-webkit-outer-spin-button {
         padding: 10px;
         font-size: 14px;
     }
+    
+    .testimonial-card-wrapper{
+        gap: 20px;
+    }
+
+    .rating-img{
+        width: 80px;
+        height: 30px;
+    }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px){
@@ -823,7 +849,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     
     .card-list{
-        gap: 20px;
+        gap: 40px;
         flex-direction: column;
         align-items: center;
     }
@@ -934,6 +960,15 @@ input[type="number"]::-webkit-outer-spin-button {
     .form-success-wrapper{
         padding: 10px;
         font-size: 16px;
+    }
+    
+    .testimonial-card-wrapper{
+        gap: 20px;
+    }
+
+    .rating-img{
+        width: 120px;
+        height: 50px;
     }
 }
 
@@ -1131,6 +1166,15 @@ input[type="number"]::-webkit-outer-spin-button {
     .form-success-wrapper{
         padding: 12px;
         font-size: 18px;
+    }
+    
+    .testimonial-card-wrapper{
+        gap: 20px;
+    }
+
+    .rating-img{
+        width: 120px;
+        height: 50px;
     }
 }
 

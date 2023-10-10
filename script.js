@@ -78,6 +78,15 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error('Error:', error);
         });
     });
+
+    const scrollButton = document.getElementById("callback_btn");
+
+    scrollButton.addEventListener("click", function() {
+        const targetDiv = document.getElementById('formContainer');
+        targetDiv.scrollIntoView({
+            behavior: "smooth"
+        })
+    });
 });
 
 document.getElementById('phoneNumber').addEventListener('click', function() {
@@ -87,3 +96,20 @@ document.getElementById('phoneNumber').addEventListener('click', function() {
 document.getElementById('phoneNumber_bm').addEventListener('click', function() {
     window.location.href = 'tel:'+document.getElementById('phoneNumber').value;
 });
+
+// document.getElementById('callback_btn').addEventListener('click', function() {
+//     const bodyContent = document.querySelector(".body-content").offsetHeight;
+//     const infoContainerHeight = document.querySelector(".info-container").offsetHeight;
+//     const infoContentHeight = document.querySelector(".info-content").offsetHeight;
+//     const formContainerHeight = document.querySelector(".form-container").offsetHeight;
+//     bodyContent.scrollBottom = infoContainerHeight + infoContentHeight + (formContainerHeight / 2);
+// });
+
+// document.getElementById('callback_btn').addEventListener('click', function() {
+//     console.log("clicked")
+//     const targetDiv = document.getElementById('formContainer');
+//     const middleOfDiv = targetDiv.scrollHeight / 2;
+    
+//     // Scroll to the middle of the div
+//     targetDiv.scrollTop = middleOfDiv;
+// });
