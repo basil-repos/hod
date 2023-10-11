@@ -10,13 +10,13 @@ let cardCount = 3;
 
 arrowBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-        if(cardCount == 9 && btn.id === "right"){
+        if(cardCount == 10 && btn.id === "right"){
             carousel.scrollLeft = 0;
             cardCount = 3;
         }else{
             if(btn.id === "left" && cardCount == 3){
                 carousel.scrollLeft = totalWidth;
-                cardCount = 9;
+                cardCount = 10;
             }else{
                 btn.id === "left" ? cardCount--: cardCount++;
                 carousel.scrollLeft += btn.id === "left" ? -(firstCardWidth + 30) : (firstCardWidth + 30);
@@ -26,7 +26,7 @@ arrowBtns.forEach(btn => {
 });
 
 const intervalId = setInterval(function() {
-    if(cardCount == 9){
+    if(cardCount == 10){
         carousel.scrollLeft = 0;
         cardCount = 3;
     }else {
@@ -96,20 +96,3 @@ document.getElementById('phoneNumber').addEventListener('click', function() {
 document.getElementById('phoneNumber_bm').addEventListener('click', function() {
     window.location.href = 'tel:'+document.getElementById('phoneNumber').value;
 });
-
-// document.getElementById('callback_btn').addEventListener('click', function() {
-//     const bodyContent = document.querySelector(".body-content").offsetHeight;
-//     const infoContainerHeight = document.querySelector(".info-container").offsetHeight;
-//     const infoContentHeight = document.querySelector(".info-content").offsetHeight;
-//     const formContainerHeight = document.querySelector(".form-container").offsetHeight;
-//     bodyContent.scrollBottom = infoContainerHeight + infoContentHeight + (formContainerHeight / 2);
-// });
-
-// document.getElementById('callback_btn').addEventListener('click', function() {
-//     console.log("clicked")
-//     const targetDiv = document.getElementById('formContainer');
-//     const middleOfDiv = targetDiv.scrollHeight / 2;
-    
-//     // Scroll to the middle of the div
-//     targetDiv.scrollTop = middleOfDiv;
-// });
