@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         // Make an AJAX request using the fetch API
-        fetch('http://api.artistrymedia.agency/save-lead', {
+        fetch('https://api.artistrymedia.agency/save-lead', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             // Handle the response data
-            if(data.status == 200){
+            if(data.status == "Success"){
                 const inputName = document.getElementById('name');
                 const inputNumber = document.getElementById('contact_number');
                 const successElement = document.getElementById('success-message');
