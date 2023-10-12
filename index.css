@@ -255,6 +255,9 @@ body{
 
 .submit-btn{
     line-height: 24.38px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .card-list-container{
@@ -500,6 +503,14 @@ body{
 .rating-img{
     width: 150px;
     height: 70px;
+}
+
+.loader-icon{
+    display: none;
+}
+.submit-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
 }
 
 input[type="number"]::-webkit-inner-spin-button,

@@ -37,9 +37,14 @@ const intervalId = setInterval(function() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("callback_form");
+    const button = document.querySelector('.submit-btn');
+    const loaderIcon = document.querySelector('.loader-icon');
     
     form.addEventListener("submit", function (e) {
         e.preventDefault();
+        
+        button.disabled = true;
+        loaderIcon.style.display = "block";
 
         // Get form data
         const formData = new FormData(event.target);
@@ -50,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         // Make an AJAX request using the fetch API
-        fetch('http://localhost:8800/api/lead/save-lead', {
+        fetch('http://api.artistrymedia.agency/save-lead', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -64,11 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 const inputName = document.getElementById('name');
                 const inputNumber = document.getElementById('contact_number');
                 const successElement = document.getElementById('success-message');
-
-                // Set the display property to "block"
+                button.disabled = false;
+                loaderIcon.style.display = "none";
                 successElement.style.display = 'block';
                 inputName.value = '';
                 inputNumber.value = '';
+                
                 setTimeout(function() {
                     successElement.style.display = 'none';
                 }, 2000);
