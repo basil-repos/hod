@@ -82,10 +82,10 @@
         <span class="form-title text-white fw-700"></span>
         <div class="form-wrapper">
             <form class="form" id="callback_form">
-                <div class="form-group form-success-wrapper" id="success-message">
+                <!-- <div class="form-group form-success-wrapper" id="success-message">
                     <i class="fa-regular fa-circle-check"></i>
                     <span>Callback data saved successfully</span>
-                </div>
+                </div> -->
                 <div class="form-group">
                     <span class="fw-600 text-white form-label">Name</span>
                     <input type="text" placeholder="Enter Name" class="input" name="name" id="name" autocomplete="off" required />
@@ -94,17 +94,27 @@
                     <span class="fw-600 text-white form-label">Contact Number</span>
                     <div class="contact-wrapper">
                         <span class="contact-text text-white">+91</span>
-                        <input type="tel" placeholder="Enter Contact Number" class="input contact-input" id="contact_number" name="contact_number" onkeydown="if (event.key === 'e') event.preventDefault();" autocomplete="off" required  minlength="10" maxlength="10" />
+                        <input type="tel" placeholder="Enter Contact Number" class="input contact-input" id="contact_number" name="contact_number" autocomplete="off" required  minlength="10" maxlength="10" />
                     </div>
                 </div>
+                <div id="error-message" style="color: red;"></div>
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" checked required />
                     <span class="form-check-label text-white fw-600">I hereby consent to receive calls/messages from House Of Dentistry 
                         and its partners and override DND settings.
                     </span>
                 </div>
-                <button class="button button-text submit-btn text-primary fw-600">Submit & Request a Free Call Back<i class="fas fa-spinner fa-spin loader-icon"></i></button>
+                <button class="button button-text submit-btn text-primary fw-600 w-100">Submit & Request a Free Call Back<i class="fas fa-spinner fa-spin loader-icon"></i></button>
             </form>
+            <div class="form-success-container" id="success-message">
+                <div class="form-success-header">
+                    <i class="fa-solid fa-circle-check form-success-icon text-white"></i>
+                    <span class="form-success-title text-white">Thank you for your response</span>
+                </div>
+                <span class="form-success-content text-white">Our team will be in touch with you shortly. If you need help right away, you can reach us at <span class="form-success-mobile">080 3559 2410.</span> 
+                    We're here to assist you.</span>
+                <button class="button button-text submit-btn text-primary fw-600 form-success-footer" id="new-submit">Submit Another Request<i class="fas fa-spinner fa-spin loader-icon"></i></button>
+            </div>
         </div>
     </div>
     <div class="card-list-container">

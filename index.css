@@ -514,6 +514,48 @@ body{
     opacity: 0.8;
 }
 
+.form-success-container{
+    width: 665px;
+    border-radius: 20px;
+    border: 1px solid #FFFFFF;
+    padding: 30px;
+    margin: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    display: none;
+}
+
+.form-success-header{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.form-success-icon{
+    font-size: 60px;
+}
+
+.form-success-title{
+    font-size: 39px;
+    font-weight: 600;
+    line-height: 47px;
+}
+
+.form-success-content{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.form-success-mobile{
+    font-weight: 900;
+}
+
+.form-success-footer{
+    margin-top: 50px;
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
