@@ -63,17 +63,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         // Make an AJAX request using the fetch API
-        // fetch('https://api.artistrymedia.agency/save-lead', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify(data)
-        // })
-        // .then(response => response.json())
-        // .then(data => {
-        //     // Handle the response data
-        //     if(data.status == "Success"){
+        fetch('https://api.artistrymedia.agency/save-lead', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response data
+            if(data.status == "Success"){
                 const inputName = document.getElementById('name');
                 const inputNumber = document.getElementById('contact_number');
                 const successElement = document.getElementById('success-message');
@@ -84,11 +84,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 successElement.style.display = 'flex';
                 inputName.value = '';
                 inputNumber.value = '';
-            // }
-        // })
-        // .catch(error => {
-        //     console.error('Error:', error);
-        // });
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     });
 
     const scrollButton = document.getElementById("callback_btn");
